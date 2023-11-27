@@ -1,0 +1,48 @@
+.top-container, .bottom-container {
+    -fx-background-color: #D6E4F0; /* Tono de azul claro */
+}
+
+.welcome-label, .info-label {
+    -fx-font-size: 14px;
+    -fx-text-fill: #2A3F5F; /* Tono de azul oscuro para texto */
+}
+
+.profile-icon {
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 10, 0, 0, 0);
+}
+
+.main-container {
+    -fx-border-color: #ACC2D0; /* Tono de azul claro para el borde */
+    -fx-border-width: 1; /* Fino */
+    -fx-border-style: solid;
+    -fx-border-insets: 15;
+    -fx-background-color: #FFFFFF; /* Fondo blanco */
+    -fx-padding: 20;
+}
+
+.section-header {
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #2A3F5F; /* Tono de azul oscuro para texto */
+    -fx-padding: 5;
+}
+
+.info-container {
+    -fx-spacing: 10;
+}
+
+.info-value {
+    -fx-font-weight: bold;
+    -fx-text-fill: #2A3F5F; /* Tono de azul oscuro para texto */
+    -fx-padding: 5;
+}
+
+.button-logout, .button-return, .button-edit {
+    -fx-background-color: #5B9BD5; /* Tono de azul estándar */
+    -fx-text-fill: white;
+    -fx-padding: 10;
+}
+
+.button-logout:hover, .button-return:hover, .button-edit:hover {
+    -fx-background-color: #6CAEDF; /* Tono de azul claro */
+}
