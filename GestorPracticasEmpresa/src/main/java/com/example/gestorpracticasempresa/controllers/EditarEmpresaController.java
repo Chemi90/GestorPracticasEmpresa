@@ -1,4 +1,4 @@
-package com.example.gestorpracticasempresa;
+package com.example.gestorpracticasempresa.controllers;
 
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;

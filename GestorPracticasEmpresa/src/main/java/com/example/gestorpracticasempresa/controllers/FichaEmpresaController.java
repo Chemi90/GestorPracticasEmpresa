@@ -1,11 +1,11 @@
-package com.example.gestorpracticasempresa;
+package com.example.gestorpracticasempresa.controllers;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.image.ImageView;
 
-public class fichaEmpresaController {
+public class FichaEmpresaController {
 
     @FXML
     private ImageView icnPersona;
