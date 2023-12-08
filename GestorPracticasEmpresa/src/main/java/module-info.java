@@ -1,6 +1,7 @@
 module com.example.gestorpracticasempresa {
     requires javafx.controls;
     requires javafx.fxml;
+    requires lombok;
 
 
     opens com.example.gestorpracticasempresa to javafx.fxml;
