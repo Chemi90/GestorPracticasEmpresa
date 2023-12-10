@@ -1,6 +1,9 @@
 module com.example.gestorpracticasempresa {
     requires javafx.controls;
     requires javafx.fxml;
+    requires jakarta.persistence;
+    requires lombok;
+    requires org.hibernate.orm.core;
 
 
     opens com.example.gestorpracticasempresa to javafx.fxml;
