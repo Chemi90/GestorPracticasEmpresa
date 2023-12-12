@@ -9,7 +9,7 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 
-<BorderPane prefHeight="575.0" prefWidth="749.0" stylesheets="@../../styles/editarEmpresa.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.gestorpracticasempresa.controllers.Empresa.EditarEmpresaController">
+<BorderPane prefHeight="575.0" prefWidth="749.0" stylesheets="@../../styles/fichaEmpresa.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.gestorpracticasempresa.controllers.Empresa.CrearEmpresaController">
     <top>
         <HBox alignment="TOP_RIGHT" prefHeight="100.0" prefWidth="200.0" styleClass="top-container" BorderPane.alignment="CENTER_RIGHT">
             <children>
@@ -35,46 +35,32 @@
     <center>
         <VBox alignment="CENTER" prefHeight="343.0" prefWidth="680.0" styleClass="main-container">
             <children>
-                <Label styleClass="section-header" text="Empresa">
+                <Label styleClass="section-header" text="Crear empresa">
                     <VBox.margin>
                         <Insets bottom="50.0" />
                     </VBox.margin>
                 </Label>
                 <HBox alignment="CENTER" styleClass="info-container">
                     <children>
-                        <Label styleClass="info-label" text="Nombre de la empresa">
+                        <Label prefHeight="20.0" prefWidth="170.0" styleClass="info-label" text="Nombre de la empresa">
                             <HBox.margin>
-                                <Insets right="45.0" />
+                                <Insets left="-20.0" />
                             </HBox.margin>
                         </Label>
-                  <TextField fx:id="tfNombre">
-                     <HBox.margin>
-                        <Insets />
-                     </HBox.margin>
-                  </TextField>
+                  <TextField prefHeight="25.0" prefWidth="141.0" />
                     </children>
                     <padding>
                         <Insets left="20.0" />
                     </padding>
-               <VBox.margin>
-                  <Insets />
-               </VBox.margin>
                 </HBox>
                 <HBox alignment="CENTER" styleClass="info-container">
                     <children>
-                        <Label styleClass="info-label" text="Teléfono">
-                            <padding>
-                                <Insets left="20.0" />
-                            </padding>
+                        <Label prefHeight="20.0" prefWidth="169.0" styleClass="info-label" text="Teléfono">
                             <HBox.margin>
-                                <Insets right="135.0" />
+                                <Insets />
                             </HBox.margin>
                         </Label>
-                  <TextField fx:id="tfTelefono">
-                     <HBox.margin>
-                        <Insets />
-                     </HBox.margin>
-                  </TextField>
+                  <TextField />
                     </children>
                     <padding>
                         <Insets bottom="5" left="20" right="20" top="5" />
@@ -82,19 +68,12 @@
                 </HBox>
                 <HBox alignment="CENTER" styleClass="info-container">
                     <children>
-                        <Label styleClass="info-label" text="Email">
-                            <padding>
-                                <Insets left="20.0" />
-                            </padding>
+                        <Label prefHeight="20.0" prefWidth="169.0" styleClass="info-label" text="Email">
                             <HBox.margin>
-                                <Insets right="155.0" />
+                                <Insets />
                             </HBox.margin>
                         </Label>
-                  <TextField fx:id="tfEmail">
-                     <HBox.margin>
-                        <Insets />
-                     </HBox.margin>
-                  </TextField>
+                  <TextField />
                     </children>
                     <padding>
                         <Insets bottom="5" left="20" right="20" top="5" />
@@ -102,19 +81,8 @@
                 </HBox>
                 <HBox alignment="CENTER" styleClass="info-container">
                     <children>
-                        <Label styleClass="info-label" text="Responsable de la empresa">
-                            <padding>
-                                <Insets left="20.0" />
-                            </padding>
-                     <HBox.margin>
-                        <Insets />
-                     </HBox.margin>
-                        </Label>
-                  <TextField fx:id="tfResponsable">
-                     <HBox.margin>
-                        <Insets left="20.0" />
-                     </HBox.margin>
-                  </TextField>
+                        <Label styleClass="info-label" text="Responsable de la empresa" />
+                  <TextField />
                     </children>
                     <padding>
                         <Insets bottom="5" left="20" right="20" top="5" />
@@ -122,19 +90,8 @@
                 </HBox>
                 <HBox alignment="CENTER" styleClass="info-container">
                     <children>
-                        <Label styleClass="info-label" text="Observaciones o incidencias">
-                            <padding>
-                                <Insets left="20.0" />
-                            </padding>
-                     <HBox.margin>
-                        <Insets right="10.0" />
-                     </HBox.margin>
-                        </Label>
-                  <TextField fx:id="tfObservaciones">
-                     <HBox.margin>
-                        <Insets left="10.0" />
-                     </HBox.margin>
-                  </TextField>
+                        <Label styleClass="info-label" text="Observaciones o incidencias" />
+                  <TextField />
                     </children>
                     <padding>
                         <Insets bottom="5" left="20" right="20" top="5" />
@@ -150,7 +107,7 @@
                     <HBox.margin>
                         <Insets left="100.0" right="100.0" />
                     </HBox.margin></Button>
-                <Button fx:id="btnGuardar" mnemonicParsing="false" styleClass="button-edit" text="Guardar cambios">
+                <Button fx:id="btnEditar" mnemonicParsing="false" styleClass="button-edit" text="Editar empresa">
                     <HBox.margin>
                         <Insets left="100.0" right="100.0" />
                     </HBox.margin></Button>

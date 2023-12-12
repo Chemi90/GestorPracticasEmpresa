@@ -10,7 +10,7 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 
-<BorderPane prefHeight="575.0" prefWidth="749.0" stylesheets="@../../styles/editarAlumno.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.gestorpracticasempresa.controllers.Alumno.EditarAlumnoController">
+<BorderPane prefHeight="575.0" prefWidth="749.0" stylesheets="@../../styles/editarAlumno.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.gestorpracticasempresa.controllers.Alumno.CrearAlumnoController">
     <top>
         <HBox alignment="TOP_RIGHT" prefHeight="90.0" prefWidth="749.0" styleClass="top-container" BorderPane.alignment="CENTER_RIGHT">
             <children>
@@ -40,7 +40,7 @@
                     <children>
                         <HBox alignment="CENTER">
                             <children>
-                                <Label styleClass="section-header" text="Ficha del Alumno" />
+                                <Label styleClass="section-header" text="Crear Alumno" />
                                 <ImageView fx:id="icnPersona2" fitHeight="39.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true" />
                             </children>
                         </HBox>
@@ -51,11 +51,11 @@
                                         <Insets />
                                     </HBox.margin>
                                 </Label>
-                        <TextField fx:id="tfNombre">
-                           <HBox.margin>
-                              <Insets left="105.0" />
-                           </HBox.margin>
-                        </TextField>
+                                <TextField fx:id="tfNombre">
+                                    <HBox.margin>
+                                        <Insets left="105.0" />
+                                    </HBox.margin>
+                                </TextField>
                             </children>
                             <padding>
                                 <Insets left="20.0" />
@@ -71,11 +71,11 @@
                                         <Insets />
                                     </HBox.margin>
                                 </Label>
-                        <TextField fx:id="tfApellido">
-                           <HBox.margin>
-                              <Insets left="75.0" />
-                           </HBox.margin>
-                        </TextField>
+                                <TextField fx:id="tfApellido">
+                                    <HBox.margin>
+                                        <Insets left="75.0" />
+                                    </HBox.margin>
+                                </TextField>
                             </children>
                             <padding>
                                 <Insets bottom="5" left="20" right="20" top="5" />
@@ -91,11 +91,11 @@
                                         <Insets />
                                     </HBox.margin>
                                 </Label>
-                        <TextField fx:id="tfDNI">
-                           <HBox.margin>
-                              <Insets left="105.0" />
-                           </HBox.margin>
-                        </TextField>
+                                <TextField fx:id="tfDNI">
+                                    <HBox.margin>
+                                        <Insets left="105.0" />
+                                    </HBox.margin>
+                                </TextField>
                             </children>
                             <padding>
                                 <Insets bottom="5" left="20" right="20" top="5" />
@@ -123,11 +123,11 @@
                         <HBox styleClass="info-container">
                             <children>
                                 <Label styleClass="info-label" text="Email" />
-                        <TextField fx:id="tfEmail">
-                           <HBox.margin>
-                              <Insets left="125.0" />
-                           </HBox.margin>
-                        </TextField>
+                                <TextField fx:id="tfEmail">
+                                    <HBox.margin>
+                                        <Insets left="125.0" />
+                                    </HBox.margin>
+                                </TextField>
                             </children>
                             <padding>
                                 <Insets bottom="5" left="20" right="20" top="5" />
@@ -139,11 +139,11 @@
                         <HBox styleClass="info-container">
                             <children>
                                 <Label styleClass="info-label" text="Teléfono de contacto" />
-                        <TextField fx:id="tfTelefono">
-                           <HBox.margin>
-                              <Insets left="28.0" />
-                           </HBox.margin>
-                        </TextField>
+                                <TextField fx:id="tfTelefono">
+                                    <HBox.margin>
+                                        <Insets left="28.0" />
+                                    </HBox.margin>
+                                </TextField>
                             </children>
                             <padding>
                                 <Insets bottom="5" left="20" right="20" top="5" />
@@ -159,11 +159,11 @@
                                         <Insets />
                                     </HBox.margin>
                                 </Label>
-                        <TextField fx:id="tfEmpresa">
-                           <HBox.margin>
-                              <Insets left="48.0" />
-                           </HBox.margin>
-                        </TextField>
+                                <TextField fx:id="tfEmpresa">
+                                    <HBox.margin>
+                                        <Insets left="48.0" />
+                                    </HBox.margin>
+                                </TextField>
                             </children>
                             <padding>
                                 <Insets bottom="5" left="20" right="20" top="5" />
@@ -179,11 +179,11 @@
                                         <Insets />
                                     </HBox.margin>
                                 </Label>
-                        <TextField fx:id="tfTutor">
-                           <HBox.margin>
-                              <Insets left="10.0" />
-                           </HBox.margin>
-                        </TextField>
+                                <TextField fx:id="tfTutor">
+                                    <HBox.margin>
+                                        <Insets left="10.0" />
+                                    </HBox.margin>
+                                </TextField>
                             </children>
                             <padding>
                                 <Insets bottom="5" left="20" right="20" top="5" />
@@ -195,11 +195,11 @@
                         <HBox styleClass="info-container">
                             <children>
                                 <Label styleClass="info-label" text="Nº horas totales DUAL" />
-                        <TextField fx:id="tfDUAL">
-                           <HBox.margin>
-                              <Insets left="20.0" />
-                           </HBox.margin>
-                        </TextField>
+                                <TextField fx:id="tfDUAL">
+                                    <HBox.margin>
+                                        <Insets left="20.0" />
+                                    </HBox.margin>
+                                </TextField>
                             </children>
                             <padding>
                                 <Insets bottom="5" left="20" right="20" top="5" />
@@ -211,11 +211,11 @@
                         <HBox styleClass="info-container">
                             <children>
                                 <Label prefHeight="20.0" prefWidth="144.0" styleClass="info-label" text="Nº horas totales FCT" />
-                        <TextField fx:id="tfFCT">
-                           <HBox.margin>
-                              <Insets left="15.0" />
-                           </HBox.margin>
-                        </TextField>
+                                <TextField fx:id="tfFCT">
+                                    <HBox.margin>
+                                        <Insets left="15.0" />
+                                    </HBox.margin>
+                                </TextField>
                             </children>
                             <padding>
                                 <Insets bottom="5" left="20" right="20" top="5" />
@@ -227,11 +227,11 @@
                         <HBox styleClass="info-container">
                             <children>
                                 <Label prefHeight="20.0" prefWidth="112.0" styleClass="info-label" text="Observaciones" />
-                        <TextField fx:id="TFObservaciones">
-                           <HBox.margin>
-                              <Insets left="48.0" />
-                           </HBox.margin>
-                        </TextField>
+                                <TextField fx:id="TFObservaciones">
+                                    <HBox.margin>
+                                        <Insets left="48.0" />
+                                    </HBox.margin>
+                                </TextField>
                             </children>
                             <padding>
                                 <Insets bottom="5" left="20" right="20" top="5" />
@@ -248,7 +248,7 @@
     <bottom>
         <HBox alignment="CENTER" prefHeight="75.0" prefWidth="749.0" styleClass="bottom-container" BorderPane.alignment="CENTER">
             <children>
-                <Button fx:id="btnCancelar" mnemonicParsing="false" styleClass="button-return" text="Cancelar">
+                <Button fx:id="btnCancelar" mnemonicParsing="false" styleClass="button-return" text="Volver">
                     <HBox.margin>
                         <Insets left="100.0" right="100.0" />
                     </HBox.margin></Button>

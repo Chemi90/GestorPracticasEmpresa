@@ -1,5 +1,8 @@
 package com.example.gestorpracticasempresa;
 
+import com.example.gestorpracticasempresa.domain.Alumno.Alumno;
+import com.example.gestorpracticasempresa.domain.Empresa.Empresa;
+import com.example.gestorpracticasempresa.domain.Profesor.Profesor;
 import lombok.Getter;
 import lombok.Setter;
 
