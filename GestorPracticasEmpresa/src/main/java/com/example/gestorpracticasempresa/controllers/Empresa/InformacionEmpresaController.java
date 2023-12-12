@@ -1,10 +1,10 @@
-package com.example.gestorpracticasempresa.controllers;
+package com.example.gestorpracticasempresa.controllers.Empresa;
 
 import javafx.event.ActionEvent;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 
-public class InformacionController
+public class InformacionEmpresaController
 {
     @javafx.fxml.FXML
     private Label empresaNombreLabel;

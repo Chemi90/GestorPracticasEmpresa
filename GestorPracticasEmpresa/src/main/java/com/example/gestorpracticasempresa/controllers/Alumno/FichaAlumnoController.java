@@ -1,4 +1,4 @@
-package com.example.gestorpracticasempresa.controllers;
+package com.example.gestorpracticasempresa.controllers.Alumno;
 
 import javafx.scene.control.Button;
 import javafx.scene.control.DatePicker;

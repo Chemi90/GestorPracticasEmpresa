@@ -1,4 +1,4 @@
-package com.example.gestorpracticasempresa.controllers;
+package com.example.gestorpracticasempresa.controllers.Alumno;
 
 import javafx.event.ActionEvent;
 import javafx.scene.control.*;
