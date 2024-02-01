@@ -1,4 +1,4 @@
-package com.example.gestorpracticasempresa.controllers;
+package com.example.gestorpracticasempresa.controllers.Empresa;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
