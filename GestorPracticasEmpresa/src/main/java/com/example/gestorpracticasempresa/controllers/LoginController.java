@@ -21,5 +21,6 @@ public class LoginController {
 
     @javafx.fxml.FXML
     public void entrar(ActionEvent actionEvent) {
+
     }
 }

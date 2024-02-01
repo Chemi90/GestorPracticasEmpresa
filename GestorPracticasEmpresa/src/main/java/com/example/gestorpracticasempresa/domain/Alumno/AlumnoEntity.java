@@ -13,13 +13,13 @@ import java.util.Date;
 @Getter
 @Setter
 @Table(name = "Alumno")
-public class Alumno {
+public class AlumnoEntity {
     @Id
     @Column(name = "dni_alum")
     private String dniAlum;
 
     @Column(name = "nom_alum", nullable = false)
-    private String nomAlum;
+    private String nom_alum;
 
     @Column(name = "fecha_nac", nullable = false)
     @Temporal(TemporalType.DATE)
@@ -55,8 +55,12 @@ public class Alumno {
     @Enumerated(EnumType.STRING)
     private TipoAlum tipoAlum;
 
+
+
 }
 
 enum TipoAlum {
     DUAL, FCT, CLASES
 }
+
+

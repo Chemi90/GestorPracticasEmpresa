@@ -1,6 +1,6 @@
 package com.example.gestorpracticasempresa.domain.Empresa;
 
-import com.example.gestorpracticasempresa.domain.Alumno.Alumno;
+import com.example.gestorpracticasempresa.domain.Alumno.AlumnoEntity;
 import com.example.gestorpracticasempresa.domain.Profesor.Profesor;
 import jakarta.persistence.*;
 import lombok.*;
@@ -31,7 +31,7 @@ public class Empresa {
     private String obserEmpresa;
 
     @OneToOne(mappedBy = "empresa")
-    private Alumno alumno;
+    private AlumnoEntity alumno;
 
     @ManyToOne
     @JoinColumn(name = "id_prof")

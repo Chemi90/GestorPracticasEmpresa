@@ -1,6 +1,6 @@
 package com.example.gestorpracticasempresa.domain.Profesor;
 
-import com.example.gestorpracticasempresa.domain.Alumno.Alumno;
+import com.example.gestorpracticasempresa.domain.Alumno.AlumnoEntity;
 import com.example.gestorpracticasempresa.domain.Empresa.Empresa;
 import jakarta.persistence.*;
 import lombok.*;
@@ -29,7 +29,7 @@ public class Profesor {
     private String emailProf;
 
     @OneToMany(mappedBy = "tutor")
-    private Set<Alumno> alumnos;
+    private Set<AlumnoEntity> alumnos;
 
     @OneToMany(mappedBy = "profesor")
     private Set<Empresa> empresas;

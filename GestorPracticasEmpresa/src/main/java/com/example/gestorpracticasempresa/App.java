@@ -1,5 +1,6 @@
 package com.example.gestorpracticasempresa;
 
+import com.example.gestorpracticasempresa.domain.Alumno.AlumnoDAO;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
@@ -15,6 +16,8 @@ public class App extends Application {
         stage.setTitle("Gestor Prácticas de Empresa");
         stage.setScene(scene);
         stage.show();
+//        AlumnoDAO alumnoDAO = new AlumnoDAO();
+//        System.out.println(alumnoDAO.getAll());
     }
 
     public static void main(String[] args) {

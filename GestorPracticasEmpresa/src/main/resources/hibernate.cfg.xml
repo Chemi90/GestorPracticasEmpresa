@@ -11,9 +11,9 @@
         <property name="hibernate.connection.password">Posnose90</property>
         <property name="hibernate.connection.username">xemita</property>
         <property name="dialect">org.hibernate.dialect.MySQLDialect</property>
-        <property name="show_sql">false</property>
+        <property name="show_sql">true</property>
 
-        <mapping class="com.example.gestorpracticasempresa.domain.Alumno.Alumno"/>
+        <mapping class="com.example.gestorpracticasempresa.domain.Alumno.AlumnoEntity"/>
         <mapping class="com.example.gestorpracticasempresa.domain.Empresa.Empresa"/>
         <mapping class="com.example.gestorpracticasempresa.domain.Profesor.Profesor"/>
 
