@@ -12,8 +12,9 @@ import java.util.Set;
 @AllArgsConstructor
 @Getter
 @Setter
+@ToString
 @Table(name = "Profesor")
-public class Profesor {
+public class ProfesorEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id_profesor")
@@ -29,9 +30,11 @@ public class Profesor {
     private String emailProf;
 
     @OneToMany(mappedBy = "tutor")
+    @ToString.Exclude
     private Set<AlumnoEntity> alumnos;
 
     @OneToMany(mappedBy = "profesor")
+    @ToString.Exclude
     private Set<Empresa> empresas;
 
 }

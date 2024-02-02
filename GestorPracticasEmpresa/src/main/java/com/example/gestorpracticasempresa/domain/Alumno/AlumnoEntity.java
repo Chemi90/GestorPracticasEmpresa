@@ -1,7 +1,7 @@
 package com.example.gestorpracticasempresa.domain.Alumno;
 
 import com.example.gestorpracticasempresa.domain.Empresa.Empresa;
-import com.example.gestorpracticasempresa.domain.Profesor.Profesor;
+import com.example.gestorpracticasempresa.domain.Profesor.ProfesorEntity;
 import jakarta.persistence.*;
 import lombok.*;
 import java.util.Date;
@@ -12,6 +12,7 @@ import java.util.Date;
 @AllArgsConstructor
 @Getter
 @Setter
+@ToString
 @Table(name = "Alumno")
 public class AlumnoEntity {
     @Id
@@ -49,7 +50,7 @@ public class AlumnoEntity {
 
     @ManyToOne
     @JoinColumn(name = "id_tutor")
-    private Profesor tutor;
+    private ProfesorEntity tutor;
 
     @Column(name = "tipo_alum")
     @Enumerated(EnumType.STRING)
@@ -57,10 +58,25 @@ public class AlumnoEntity {
 
 
 
+    public AlumnoEntity (String dniAlum, String nom_alum, Date fechaNac, String contraAlum, String emailAlum, String telefAlum, Empresa empresa, Integer horasAct, Integer horasTot, String obserAlum, ProfesorEntity tutor, String tipoAlum) {
+        this.dniAlum = dniAlum;
+        this.nom_alum = nom_alum;
+        this.fechaNac = fechaNac;
+        this.contraAlum = contraAlum;
+        this.emailAlum = emailAlum;
+        this.telefAlum = telefAlum;
+        this.empresa = empresa;
+        this.horasAct = horasAct;
+        this.horasTot = horasTot;
+        this.obserAlum = obserAlum;
+        this.tutor = tutor;
+        this.tipoAlum = TipoAlum.valueOf(tipoAlum);
+    }
 }
 
 enum TipoAlum {
-    DUAL, FCT, CLASES
+    dual, fct, clases
 }
+
 
 

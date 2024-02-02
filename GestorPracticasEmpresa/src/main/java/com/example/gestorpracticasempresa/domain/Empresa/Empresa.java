@@ -1,7 +1,7 @@
 package com.example.gestorpracticasempresa.domain.Empresa;
 
 import com.example.gestorpracticasempresa.domain.Alumno.AlumnoEntity;
-import com.example.gestorpracticasempresa.domain.Profesor.Profesor;
+import com.example.gestorpracticasempresa.domain.Profesor.ProfesorEntity;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -12,6 +12,7 @@ import lombok.*;
 @AllArgsConstructor
 @Getter
 @Setter
+@ToString
 public class Empresa {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -31,10 +32,12 @@ public class Empresa {
     private String obserEmpresa;
 
     @OneToOne(mappedBy = "empresa")
+    @ToString.Exclude
     private AlumnoEntity alumno;
 
     @ManyToOne
     @JoinColumn(name = "id_prof")
-    private Profesor profesor;
+    @ToString.Exclude
+    private ProfesorEntity profesor;
 
 }

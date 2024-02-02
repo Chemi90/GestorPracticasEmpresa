@@ -4,34 +4,34 @@ import com.example.gestorpracticasempresa.persistence.DAO;
 
 import java.util.ArrayList;
 
-public class ProfesorDAO implements DAO<Profesor> {
+public class ProfesorDAO implements DAO<ProfesorEntity> {
     @Override
-    public ArrayList<Profesor> getAll() {
+    public ArrayList<ProfesorEntity> getAll() {
         return null;
     }
 
     @Override
-    public Profesor get(Long id) {
+    public ProfesorEntity get(Long id) {
         return null;
     }
 
     @Override
-    public Profesor save(Profesor data) {
+    public ProfesorEntity save(ProfesorEntity data) {
         return null;
     }
 
     @Override
-    public void update(Profesor data) {
+    public void update(ProfesorEntity data) {
 
     }
 
     @Override
-    public void delete(Profesor data) {
+    public void delete(ProfesorEntity data) {
 
     }
 
     @Override
-    public boolean remove(Profesor profesor) {
+    public boolean remove(ProfesorEntity profesor) {
         return false;
     }
 }
