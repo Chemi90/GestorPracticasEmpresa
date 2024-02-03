@@ -6,7 +6,7 @@ import com.example.gestorpracticasempresa.domain.Profesor.Profesor;
 import lombok.Getter;
 import lombok.Setter;
 
-public class Session {
+public class Sesion {
 
     @Setter
     @Getter

@@ -1,4 +1,4 @@
-package com.example.gestorpracticasempresa.persistence;
+package com.example.gestorpracticasempresa.domain;
 
 import java.util.ArrayList;
 

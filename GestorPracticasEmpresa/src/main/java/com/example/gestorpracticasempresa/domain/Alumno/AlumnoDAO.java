@@ -1,6 +1,6 @@
 package com.example.gestorpracticasempresa.domain.Alumno;
 
-import com.example.gestorpracticasempresa.persistence.DAO;
+import com.example.gestorpracticasempresa.domain.DAO;
 
 import java.util.ArrayList;
 

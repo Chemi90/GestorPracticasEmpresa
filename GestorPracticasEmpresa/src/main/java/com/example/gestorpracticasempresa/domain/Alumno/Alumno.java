@@ -5,6 +5,7 @@ import com.example.gestorpracticasempresa.domain.Profesor.Profesor;
 import jakarta.persistence.*;
 import lombok.*;
 import java.util.Date;
+import java.util.Set;
 
 @Data
 @Entity
@@ -52,11 +53,15 @@ public class Alumno {
     private Profesor tutor;
 
     @Column(name = "tipo_alum")
-    @Enumerated(EnumType.STRING)
-    private TipoAlum tipoAlum;
+    private String tipoAlum; // Cambiado de TipoAlum enum a String
 
-}
+    private static final Set<String> TIPOS_PERMITIDOS = Set.of("dual", "fct", "clases");
 
-enum TipoAlum {
-    DUAL, FCT, CLASES
+    public void setTipoAlum(String tipoAlum) {
+        if (TIPOS_PERMITIDOS.contains(tipoAlum.toLowerCase())) {
+            this.tipoAlum = tipoAlum;
+        } else {
+            throw new IllegalArgumentException("Valor no permitido para tipoAlum. Los valores permitidos son: dual, fct, clases.");
+        }
+    }
 }
