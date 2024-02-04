@@ -17,14 +17,13 @@
             <center>
                 <VBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="555.0" prefWidth="900.0" BorderPane.alignment="TOP_CENTER">
                     <children>
-                        <TableView maxHeight="513.0" maxWidth="800.0" prefHeight="462.0" prefWidth="800.0">
+                        <TableView fx:id="tbEntradaProfesor" maxHeight="513.0" maxWidth="800.0" prefHeight="462.0" prefWidth="800.0">
                             <columns>
-                                <TableColumn prefWidth="75.0" text="Fecha" />
-                                <TableColumn prefWidth="91.02032470703125" text="Tipo práctica" />
-                                <TableColumn prefWidth="95.08047485351562" text="Total horas/día" />
-                                <TableColumn prefWidth="214.32064819335938" text="Actividad" />
-                                <TableColumn prefWidth="185.6793212890625" text="Observaciones" />
-                                <TableColumn prefWidth="71.69415283203125" text="Editar" />
+                                <TableColumn fx:id="cFecha" prefWidth="75.0" text="Fecha" />
+                                <TableColumn fx:id="cTipoPractica" prefWidth="91.02032470703125" text="Tipo práctica" />
+                                <TableColumn fx:id="cHorasDia" prefWidth="95.08047485351562" text="Total horas/día" />
+                                <TableColumn fx:id="cActividad" prefWidth="214.32064819335938" text="Actividad" />
+                                <TableColumn fx:id="cObservaciones" prefWidth="185.6793212890625" text="Observaciones" />
                             </columns>
                      <columnResizePolicy>
                         <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
@@ -38,7 +37,7 @@
                     <children>
                         <HBox alignment="CENTER" prefHeight="100.0" prefWidth="315.0">
                             <children>
-                                <Label text="Bienvenido Profesor">
+                                <Label fx:id="lbNombre" text="Bienvenido Profesor">
                                     <font>
                                         <Font size="18.0" />
                                     </font>

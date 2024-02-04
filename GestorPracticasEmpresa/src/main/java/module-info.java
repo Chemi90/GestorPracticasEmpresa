@@ -25,4 +25,5 @@ module com.example.gestorpracticasempresa {
     opens com.example.gestorpracticasempresa.domain.Profesor to org.hibernate.orm.core, javafx.base;
     exports com.example.gestorpracticasempresa.controllers.Profesor;
     opens com.example.gestorpracticasempresa.controllers.Profesor to javafx.fxml;
+    opens com.example.gestorpracticasempresa.domain.EntradaAlumno to org.hibernate.orm.core, javafx.base;
 }

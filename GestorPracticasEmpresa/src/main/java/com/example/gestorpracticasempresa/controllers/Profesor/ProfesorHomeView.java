@@ -2,8 +2,6 @@ package com.example.gestorpracticasempresa.controllers.Profesor;
 
 import com.example.gestorpracticasempresa.Sesion;
 import com.example.gestorpracticasempresa.controllers.AlumnoInfo;
-import com.example.gestorpracticasempresa.domain.Alumno.Alumno;
-import com.example.gestorpracticasempresa.domain.Empresa.Empresa;
 import com.example.gestorpracticasempresa.domain.HibernateUtil;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.collections.FXCollections;
@@ -17,10 +15,10 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
-import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
 import org.hibernate.Session;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -31,23 +29,32 @@ public class ProfesorHomeView {
     @FXML private Label lbNombre;
 
     public void initialize() {
-        // Aquí se configuran las columnas para que usen las propiedades de AlumnoInfo
+        configureTableColumns();
+        loadTableData();
+        setupTableSelectionListener();
+    }
+
+    private void configureTableColumns() {
         cNombreAlumno.setCellValueFactory(cellData -> new SimpleStringProperty(cellData.getValue().getNomAlum()));
         cEntrada.setCellValueFactory(cellData -> new SimpleStringProperty(cellData.getValue().getObserAlum()));
         cNombreEmpresa.setCellValueFactory(cellData -> new SimpleStringProperty(cellData.getValue().getNomEmpresa()));
-
-        cargarDatosEnTabla();
     }
-    private List<AlumnoInfo> obtenerInformacionAlumnos() {
+
+    private void loadTableData() {
+        ObservableList<AlumnoInfo> alumnoInfos = FXCollections.observableArrayList(obtainAlumnosInfo());
+        tbProfesor.setItems(alumnoInfos);
+    }
+
+    private List<AlumnoInfo> obtainAlumnosInfo() {
         List<AlumnoInfo> alumnoInfos = new ArrayList<>();
         try (Session session = HibernateUtil.getSessionFactory().openSession()) {
             List<Object[]> resultList = session.createQuery(
-                            "SELECT a.dniAlum, a.nomAlum, a.obserAlum FROM Alumno a WHERE a.tutor.idProfesor = :idProfesor", Object[].class)
+                            "SELECT a.dniAlum, a.nomAlum, a.obserAlum, e.nomEmpresa FROM Alumno a LEFT JOIN a.empresa e WHERE a.tutor.idProfesor = :idProfesor", Object[].class)
                     .setParameter("idProfesor", Sesion.getId_profesor().getIdProfesor())
                     .getResultList();
             for (Object[] row : resultList) {
-                AlumnoInfo alumnoInfo = new AlumnoInfo((String) row[0], (String) row[1], (String) row[2], null);
-                alumnoInfos.add(alumnoInfo);
+                String nomEmpresa = row[3] != null ? (String) row[3] : "N/A";
+                alumnoInfos.add(new AlumnoInfo((String) row[0], (String) row[1], (String) row[2], nomEmpresa));
             }
         } catch (Exception e) {
             e.printStackTrace();
@@ -55,84 +62,60 @@ public class ProfesorHomeView {
         return alumnoInfos;
     }
 
-    private String obtenerNombreEmpresaPorDniAlumno(String dniAlum) {
-        try (Session session = HibernateUtil.getSessionFactory().openSession()) {
-            Empresa empresa = session.createQuery("SELECT a.empresa FROM Alumno a WHERE a.dniAlum = :dniAlum", Empresa.class)
-                    .setParameter("dniAlum", dniAlum)
-                    .uniqueResult();
+    private void setupTableSelectionListener() {
+        tbProfesor.getSelectionModel().selectedItemProperty().addListener((obs, oldSelection, newSelection) -> {
+            if (newSelection != null) {
+                AlumnoInfo selectedAlumnoInfo = newSelection;
+                Sesion.setAlumnoInfo(selectedAlumnoInfo); // Adjust Sesion to store AlumnoInfo
+                openEntradaProfesorView();
+            }
+        });
+    }
 
-            return empresa != null ? empresa.getNomEmpresa() : "N/A";
+    private void openEntradaProfesorView() {
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/example/gestorpracticasempresa/entradasProfesor-view.fxml"));
+            Parent root = loader.load();
+
+            // Obtiene el Stage actual
+            Stage stage = (Stage) tbProfesor.getScene().getWindow();
+            // Cambia la escena del Stage actual
+            stage.setScene(new Scene(root));
+            stage.setTitle("Entradas del Alumno");
+            // No necesitas mostrarlo ya que simplemente estás cambiando la escena del Stage existente
         } catch (Exception e) {
             e.printStackTrace();
-            return "N/A";
         }
     }
 
-    private void cargarDatosEnTabla() {
-        List<AlumnoInfo> alumnoInfos = obtenerInformacionAlumnos();
-        for (AlumnoInfo alumnoInfo : alumnoInfos) {
-            String nomEmpresa = obtenerNombreEmpresaPorDniAlumno(alumnoInfo.getDniAlum());
-            System.out.println("Nombre de la empresa para el DNI " + alumnoInfo.getDniAlum() + ": " + nomEmpresa); // Imprimir para debuguear
-            alumnoInfo.setNomEmpresa(nomEmpresa);
-        }
-        ObservableList<AlumnoInfo> datosParaTabla = FXCollections.observableArrayList(alumnoInfos);
-        tbProfesor.setItems(datosParaTabla);
-    }
-
-    @javafx.fxml.FXML
+    @FXML
     public void salir(ActionEvent actionEvent) {
         try {
-            // Carga la vista de login
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/example/gestorpracticasempresa/login-view.fxml"));
-            Parent root = loader.load();
-
-            // Obtiene la ventana (Stage) actual y establece la nueva escena (la pantalla de login)
             Stage stage = (Stage) salirBtn.getScene().getWindow();
+            stage.close();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    @FXML
+    public void crearEmpresa(ActionEvent actionEvent) {
+        loadView("/com/example/gestorpracticasempresa/crearEmpresa-view.fxml");
+    }
+
+    @FXML
+    public void crearAlumno(ActionEvent actionEvent) {
+        loadView("/com/example/gestorpracticasempresa/crearAlumno-view.fxml");
+    }
+
+    private void loadView(String fxmlPath) {
+        try {
+            Parent root = FXMLLoader.load(getClass().getResource(fxmlPath));
+            Stage stage = new Stage();
             stage.setScene(new Scene(root));
             stage.show();
-
-            // Opcional: Si estás manteniendo una sesión, limpia los datos de la sesión aquí
-            // Sesion.clear();
-
-        } catch (Exception e) {
+        } catch (IOException e) {
             e.printStackTrace();
-            // Aquí puedes manejar el error, como mostrar un mensaje de error al usuario.
-        }
-    }
-
-    @javafx.fxml.FXML
-    public void crearEmpresa(ActionEvent actionEvent) {
-        try {
-            // Asegúrate de que la ruta al archivo FXML es correcta.
-            // La ruta debe ser relativa a la carpeta 'src/main/resources' del proyecto.
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/example/gestorpracticasempresa/crearEmpresa-view.fxml"));
-            Parent root = loader.load();
-
-            Stage stage = (Stage) crearEmpresaBtn.getScene().getWindow();
-            Scene scene = new Scene(root);
-            stage.setScene(scene);
-            stage.show();
-        } catch (Exception e) {
-            e.printStackTrace();
-            // Aquí puedes manejar el error, como mostrar un mensaje de error al usuario.
-        }
-    }
-
-    @javafx.fxml.FXML
-    public void crearAlumno(ActionEvent actionEvent) {
-        try {
-            // Asegúrate de que la ruta al archivo FXML es correcta.
-            // La ruta debe ser relativa a la carpeta 'src/main/resources' del proyecto.
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/example/gestorpracticasempresa/crearAlumno-view.fxml"));
-            Parent root = loader.load();
-
-            Stage stage = (Stage) crearAlumnoBtn.getScene().getWindow();
-            Scene scene = new Scene(root);
-            stage.setScene(scene);
-            stage.show();
-        } catch (Exception e) {
-            e.printStackTrace();
-            // Aquí puedes manejar el error, como mostrar un mensaje de error al usuario.
         }
     }
 

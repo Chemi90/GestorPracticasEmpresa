@@ -16,6 +16,8 @@
         <mapping class="com.example.gestorpracticasempresa.domain.Alumno.Alumno"/>
         <mapping class="com.example.gestorpracticasempresa.domain.Empresa.Empresa"/>
         <mapping class="com.example.gestorpracticasempresa.domain.Profesor.Profesor"/>
+        <mapping class="com.example.gestorpracticasempresa.domain.EntradaAlumno.EntradaAlumno"/>
+
 
 
     </session-factory>
