@@ -1,7 +1,7 @@
 package com.example.gestorpracticasempresa.domain.Empresa;
 
-import com.example.gestorpracticasempresa.domain.Alumno.AlumnoEntity;
-import com.example.gestorpracticasempresa.domain.Profesor.ProfesorEntity;
+import com.example.gestorpracticasempresa.domain.Alumno.Alumno;
+import com.example.gestorpracticasempresa.domain.Profesor.Profesor;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -33,11 +33,11 @@ public class Empresa {
 
     @OneToOne(mappedBy = "empresa")
     @ToString.Exclude
-    private AlumnoEntity alumno;
+    private Alumno alumno;
 
     @ManyToOne
     @JoinColumn(name = "id_prof")
     @ToString.Exclude
-    private ProfesorEntity profesor;
+    private Profesor profesor;
 
 }

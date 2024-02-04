@@ -87,8 +87,9 @@ public class AlumnoDAO implements DAO<Alumno> {
             Transaction tst = session.beginTransaction();
             session.remove(alumno);
             tst.commit();
-            
-            if (Objects.isNull(getByDni(alumno.getDniAlum()))) {
+            try {
+                getByDni(alumno.getDniAlum());
+            }catch (Exception e) {
                 eliminado = true;
             }
 

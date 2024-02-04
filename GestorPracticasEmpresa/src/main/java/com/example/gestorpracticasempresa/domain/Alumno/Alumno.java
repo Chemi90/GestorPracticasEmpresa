@@ -1,7 +1,7 @@
 package com.example.gestorpracticasempresa.domain.Alumno;
 
 import com.example.gestorpracticasempresa.domain.Empresa.Empresa;
-import com.example.gestorpracticasempresa.domain.Profesor.ProfesorEntity;
+import com.example.gestorpracticasempresa.domain.Profesor.Profesor;
 import jakarta.persistence.*;
 import lombok.*;
 import java.util.Date;
@@ -15,7 +15,7 @@ import java.util.Set;
 @Setter
 @ToString
 @Table(name = "Alumno")
-public class AlumnoEntity {
+public class Alumno {
     @Id
     @Column(name = "dni_alum")
     private String dniAlum;
@@ -51,10 +51,10 @@ public class AlumnoEntity {
 
     @ManyToOne
     @JoinColumn(name = "id_tutor")
-    private ProfesorEntity tutor;
+    private Profesor tutor;
 
     @Column(name = "tipo_alum")
-    private String tipoAlum; // Cambiado de TipoAlum enum a String
+    private String tipoAlum;
 
     private static final Set<String> TIPOS_PERMITIDOS = Set.of("dual", "fct", "clases");
 

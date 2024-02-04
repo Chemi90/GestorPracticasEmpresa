@@ -5,22 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="76063abd-2e70-4aa2-8427-1019b05dad6d" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../.idea/dataSources/d73a7032-4aa7-4791-af13-a895fd055867.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/dataSources/d73a7032-4aa7-4791-af13-a895fd055867.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/gestorpracticasempresa/Session.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/gestorpracticasempresa/Session.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/gestorpracticasempresa/domain/Alumno/Alumno.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/gestorpracticasempresa/domain/Alumno/Alumno.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/gestorpracticasempresa/domain/Alumno/AlumnoDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/gestorpracticasempresa/domain/Alumno/AlumnoDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/gestorpracticasempresa/domain/Alumno/AlumnoEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/gestorpracticasempresa/domain/Alumno/AlumnoEntity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/gestorpracticasempresa/domain/Empresa/Empresa.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/gestorpracticasempresa/domain/Empresa/Empresa.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/gestorpracticasempresa/persistence/DAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/gestorpracticasempresa/persistence/DAO.java" afterDir="false" />
     </list>
     <list id="181b1035-0a27-42d0-a6eb-3495427bf41c" name="Changes by guzma" comment="">
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/gestorpracticasempresa/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/gestorpracticasempresa/App.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/gestorpracticasempresa/domain/Alumno/AlumnoDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/gestorpracticasempresa/domain/Alumno/AlumnoDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/gestorpracticasempresa/domain/Alumno/AlumnoEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/gestorpracticasempresa/domain/Alumno/AlumnoEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/gestorpracticasempresa/domain/Empresa/Empresa.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/gestorpracticasempresa/domain/Empresa/Empresa.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/gestorpracticasempresa/domain/Profesor/Profesor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/gestorpracticasempresa/domain/Profesor/ProfesorEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/gestorpracticasempresa/domain/Profesor/ProfesorDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/gestorpracticasempresa/domain/Profesor/ProfesorDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/gestorpracticasempresa/domain/Profesor/Profesor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/gestorpracticasempresa/domain/Profesor/Profesor.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,39 +34,6 @@
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
-  <component name="LineStatusTrackerManager">
-    <file path="$PROJECT_DIR$/src/main/java/com/example/gestorpracticasempresa/domain/Alumno/AlumnoEntity.java">
-      <ranges>
-        <range start1="3" end1="4" start2="3" end2="4" changelist="181b1035-0a27-42d0-a6eb-3495427bf41c" />
-        <range start1="14" end1="14" start2="14" end2="15" changelist="181b1035-0a27-42d0-a6eb-3495427bf41c" />
-        <range start1="51" end1="52" start2="52" end2="53" changelist="181b1035-0a27-42d0-a6eb-3495427bf41c" />
-        <range start1="56" end1="56" start2="57" end2="59" changelist="181b1035-0a27-42d0-a6eb-3495427bf41c" />
-        <range start1="57" end1="59" start2="60" end2="74" changelist="76063abd-2e70-4aa2-8427-1019b05dad6d" />
-        <range start1="62" end1="63" start2="77" end2="78" changelist="181b1035-0a27-42d0-a6eb-3495427bf41c" />
-        <range start1="64" end1="64" start2="79" end2="80" changelist="181b1035-0a27-42d0-a6eb-3495427bf41c" />
-      </ranges>
-    </file>
-    <file path="$PROJECT_DIR$/src/main/java/com/example/gestorpracticasempresa/domain/Alumno/AlumnoDAO.java">
-      <ranges>
-        <range start1="5" end1="5" start2="5" end2="9" changelist="181b1035-0a27-42d0-a6eb-3495427bf41c" />
-        <range start1="6" end1="6" start2="10" end2="11" changelist="181b1035-0a27-42d0-a6eb-3495427bf41c" />
-        <range start1="20" end1="23" start2="25" end2="34" changelist="76063abd-2e70-4aa2-8427-1019b05dad6d" />
-        <range start1="24" end1="24" start2="35" end2="41" changelist="181b1035-0a27-42d0-a6eb-3495427bf41c" />
-        <range start1="27" end1="27" start2="44" end2="52" changelist="181b1035-0a27-42d0-a6eb-3495427bf41c" />
-        <range start1="31" end1="32" start2="56" end2="68" changelist="181b1035-0a27-42d0-a6eb-3495427bf41c" />
-        <range start1="33" end1="33" start2="69" end2="72" changelist="181b1035-0a27-42d0-a6eb-3495427bf41c" />
-        <range start1="41" end1="43" start2="80" end2="95" changelist="181b1035-0a27-42d0-a6eb-3495427bf41c" />
-      </ranges>
-    </file>
-    <file path="$PROJECT_DIR$/src/main/java/com/example/gestorpracticasempresa/domain/Empresa/Empresa.java">
-      <ranges>
-        <range start1="3" end1="4" start2="3" end2="4" changelist="76063abd-2e70-4aa2-8427-1019b05dad6d" />
-        <range start1="14" end1="14" start2="14" end2="15" changelist="181b1035-0a27-42d0-a6eb-3495427bf41c" />
-        <range start1="33" end1="33" start2="34" end2="35" changelist="181b1035-0a27-42d0-a6eb-3495427bf41c" />
-        <range start1="37" end1="38" start2="39" end2="41" changelist="76063abd-2e70-4aa2-8427-1019b05dad6d" />
-      </ranges>
-    </file>
-  </component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
@@ -93,28 +52,28 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.App.executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "pablo",
-    "ignore.virus.scanning.warn.message": "true",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/Pablo/Documents/GitHub/GestorPracticasEmpresa/GestorPracticasEmpresa",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "reference.settings.ide.settings.new.ui",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.App.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;pablo&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Pablo/Documents/GitHub/GestorPracticasEmpresa/GestorPracticasEmpresa&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.ide.settings.new.ui&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Pablo\Documents\GitHub\GestorPracticasEmpresa\GestorPracticasEmpresa\src\main\java\com\example\gestorpracticasempresa" />
@@ -164,6 +123,7 @@
       <workItem from="1706812053850" duration="5615000" />
       <workItem from="1706896015951" duration="44000" />
       <workItem from="1706896156675" duration="5182000" />
+      <workItem from="1707076287301" duration="32000" />
     </task>
     <servers />
   </component>

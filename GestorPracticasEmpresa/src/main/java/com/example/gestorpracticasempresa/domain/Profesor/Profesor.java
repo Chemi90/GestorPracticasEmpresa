@@ -1,6 +1,6 @@
 package com.example.gestorpracticasempresa.domain.Profesor;
 
-import com.example.gestorpracticasempresa.domain.Alumno.AlumnoEntity;
+import com.example.gestorpracticasempresa.domain.Alumno.Alumno;
 import com.example.gestorpracticasempresa.domain.Empresa.Empresa;
 import jakarta.persistence.*;
 import lombok.*;
@@ -14,7 +14,7 @@ import java.util.Set;
 @Setter
 @ToString
 @Table(name = "Profesor")
-public class ProfesorEntity {
+public class Profesor {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id_profesor")
@@ -31,7 +31,7 @@ public class ProfesorEntity {
 
     @OneToMany(mappedBy = "tutor")
     @ToString.Exclude
-    private Set<AlumnoEntity> alumnos;
+    private Set<Alumno> alumnos;
 
     @OneToMany(mappedBy = "profesor")
     @ToString.Exclude
