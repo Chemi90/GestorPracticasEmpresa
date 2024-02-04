@@ -65,8 +65,20 @@ public class ModificarEntradaProfesorController {
 
     @FXML
     public void cerrar(ActionEvent actionEvent) {
-        // Cerrar la ventana
-        ((Button)actionEvent.getSource()).getScene().getWindow().hide();
+        try {
+            // Carga la nueva vista
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/example/gestorpracticasempresa/entradasProfesor-view.fxml"));
+            Parent root = loader.load();
+
+            Stage stage = (Stage) ((Button) actionEvent.getSource()).getScene().getWindow();
+            stage.setScene(new Scene(root));
+
+            stage.setTitle("Profesor Home");
+            stage.show();
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
     @FXML
