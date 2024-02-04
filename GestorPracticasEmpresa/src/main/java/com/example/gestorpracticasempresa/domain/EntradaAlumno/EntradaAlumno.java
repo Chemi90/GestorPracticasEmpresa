@@ -38,5 +38,14 @@ public class EntradaAlumno {
     @JoinColumn(name = "dni_alum", referencedColumnName = "dni_alum")
     private Alumno alumno;
 
+    public EntradaAlumno(LocalDate fecha, String tipoPractica, int totalHoras, String actividad, String observaciones, Alumno alumno) {
+        this.fecha = fecha;
+        this.tipoPractica = tipoPractica;
+        this.totalHoras = totalHoras;
+        this.actividad = actividad;
+        this.observaciones = observaciones;
+        this.alumno = alumno;
+    }
+
     // Getters y setters
 }

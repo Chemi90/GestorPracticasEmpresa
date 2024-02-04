@@ -18,12 +18,15 @@ public class Sesion {
     private static Alumno dni; // Pedido actual en la sesión
     @Setter
     @Getter
-
     private static Profesor id_profesor;
+    @Setter
+    @Getter
+    private static Alumno id_alumno;
     @Setter
     @Getter
     private static AlumnoInfo alumnoInfo;
     @Setter @Getter
     private static EntradaAlumno entradaAlumnoSeleccionada;
+
 
 }

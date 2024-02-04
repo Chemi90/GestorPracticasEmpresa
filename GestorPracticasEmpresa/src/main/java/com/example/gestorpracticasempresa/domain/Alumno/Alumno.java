@@ -21,7 +21,7 @@ public class Alumno {
     private String dniAlum;
 
     @Column(name = "nom_alum", nullable = false)
-    private String nom_alum;
+    private String nomAlum;
 
     @Column(name = "fecha_nac", nullable = false)
     @Temporal(TemporalType.DATE)

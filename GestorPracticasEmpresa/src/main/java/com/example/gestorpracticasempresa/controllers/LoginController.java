@@ -1,7 +1,10 @@
 package com.example.gestorpracticasempresa.controllers;
 
 import com.example.gestorpracticasempresa.Sesion;
+import com.example.gestorpracticasempresa.controllers.Alumno.AlumnoHomeController;
 import com.example.gestorpracticasempresa.controllers.Profesor.ProfesorHomeView;
+import com.example.gestorpracticasempresa.domain.Alumno.Alumno;
+import com.example.gestorpracticasempresa.domain.Alumno.AlumnoDAO;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -36,7 +39,9 @@ public class LoginController {
         String contraseña = passField.getText();
 
         ProfesorDAO profesorDAO = new ProfesorDAO();
+        AlumnoDAO alumnoDAO = new AlumnoDAO();
         Profesor profesorLogueado = profesorDAO.getByEmailAndPassword(email, contraseña);
+        Alumno alumnoLogueado = alumnoDAO.getByEmailAndPassword(email,contraseña);
         if (profesorLogueado != null) {
             // Guarda el profesor logueado en la sesión
             Sesion.setId_profesor(profesorLogueado);
@@ -56,7 +61,23 @@ public class LoginController {
             } catch (Exception e) {
                 e.printStackTrace();
             }
-        } else {
+        } else if (alumnoLogueado != null) {
+            // Guarda el alumno logueado en la sesión
+            Sesion.setId_alumno(alumnoLogueado);
+
+            try {
+                FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/example/gestorpracticasempresa/AlumnoHome-view.fxml"));
+                Parent root = loader.load();
+
+                Stage stage = (Stage) accederBtn.getScene().getWindow();
+                Scene scene = new Scene(root);
+                stage.setScene(scene);
+                stage.show();
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }
+        else {
             Alert alert = new Alert(Alert.AlertType.ERROR);
             alert.setTitle("Error de inicio de sesión");
             alert.setHeaderText(null);

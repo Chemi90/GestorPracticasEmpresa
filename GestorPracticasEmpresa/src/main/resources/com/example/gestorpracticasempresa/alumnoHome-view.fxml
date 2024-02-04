@@ -8,7 +8,6 @@
 <?import javafx.scene.control.ProgressBar?>
 <?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.TextField?>
-<?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.ColumnConstraints?>
@@ -18,7 +17,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1200.0" style="-fx-background-color: #E9F1F2;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.gestorpracticasempresa.controllers.Alumno.AlumnoHomeController">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1200.0" style="-fx-background-color: #E9F1F2;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.gestorpracticasempresa.controllers.Alumno.AlumnoHomeController">
    <center>
       <BorderPane prefHeight="392.0" prefWidth="600.0" BorderPane.alignment="CENTER">
          <center>
@@ -88,11 +87,9 @@
                         <HBox alignment="CENTER">
                            <children>
                               <ImageView fitHeight="60.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true">
-                                 <image>
-                                    <Image url="@school_1f3eb.png" />
-                                 </image>
+
                               </ImageView>
-                              <Label text="Nombre empresa">
+                              <Label fx:id="nombreEmpresa" text="Nombre empresa">
                                  <HBox.margin>
                                     <Insets left="10.0" />
                                  </HBox.margin>
@@ -107,7 +104,7 @@
                         </HBox>
                         <HBox alignment="CENTER">
                            <children>
-                              <ProgressBar prefWidth="200.0" progress="0.67" style="-fx-accent: #85A0A6;" />
+                              <ProgressBar fx:id="progresoHoras" prefWidth="200.0" progress="0.67" style="-fx-accent: #85A0A6;" />
                               <Label fx:id="nHorasTotales" text="Nº horas totales">
                                  <HBox.margin>
                                     <Insets left="10.0" />
@@ -147,15 +144,12 @@
                      <children>
                         <HBox alignment="CENTER" prefHeight="100.0" prefWidth="308.0">
                            <children>
-                              <Label text="Bienvenido Alumno">
+                              <Label fx:id="lbNombre" text="Bienvenido Alumno">
                                  <font>
                                     <Font size="18.0" />
                                  </font>
                               </Label>
                               <ImageView fitHeight="40.0" fitWidth="70.0" pickOnBounds="true" preserveRatio="true">
-                                 <image>
-                                    <Image url="@bust-in-silhouette_1f464.png" />
-                                 </image>
                               </ImageView>
                            </children>
                         </HBox>
