@@ -1,47 +1,50 @@
 package com.example.gestorpracticasempresa.domain.Alumno;
 
-import com.example.gestorpracticasempresa.persistence.DAO;
+
+//import com.example.gestorpracticasempresa.persistence.DAO;
 import com.example.gestorpracticasempresa.utils.HibernateUtils;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 import org.hibernate.HibernateException;
-import org.hibernate.query.Query;
+
+import com.example.gestorpracticasempresa.domain.DAO;
+
 
 import java.util.ArrayList;
 import java.util.Objects;
 
-public class AlumnoDAO implements DAO<AlumnoEntity> {
+public class AlumnoDAO implements DAO<Alumno> {
 
-    public ArrayList<AlumnoEntity> getAll () {
-        ArrayList<AlumnoEntity> alumnos = new ArrayList<>();
+    public ArrayList<Alumno> getAll () {
+        ArrayList<Alumno> alumnos = new ArrayList<>();
         try (Session session = HibernateUtils.getSessionFactory().openSession()){
-            String sql_query = "SELECT Alumno FROM AlumnoEntity Alumno ";
-            var query = session.createQuery(sql_query, AlumnoEntity.class);
-            alumnos = (ArrayList<AlumnoEntity>) query.list();
+            String sql_query = "SELECT Alumno FROM Alumno Alumno ";
+            var query = session.createQuery(sql_query, Alumno.class);
+            alumnos = (ArrayList<Alumno>) query.list();
         }
 
         return alumnos;
     }
 
-    public AlumnoEntity getByDni(String dni) {
-        AlumnoEntity alumno = new AlumnoEntity();
+    public Alumno getByDni(String dni) {
+        Alumno alumno = new Alumno();
         try(Session session = HibernateUtils.getSessionFactory().openSession()){
-            String sql_query = "SELECT Alumno FROM AlumnoEntity Alumno WHERE dniAlum = :NId ";
-            var query = session.createQuery(sql_query, AlumnoEntity.class);
+            String sql_query = "SELECT Alumno FROM Alumno Alumno WHERE dniAlum = :NId ";
+            var query = session.createQuery(sql_query, Alumno.class);
             query.setParameter("NId", dni);
-            alumno = (AlumnoEntity) query.getSingleResult();
+            alumno = (Alumno) query.getSingleResult();
         }
         return alumno;
     }
 
     @Override
-    public AlumnoEntity get(Long dni) {
+    public Alumno get(Long dni) {
 
         return null;
     }
 
     @Override
-    public AlumnoEntity save(AlumnoEntity data) {
+    public Alumno save(Alumno data) {
         try (Session session = HibernateUtils.getSessionFactory().openSession()) {
             Transaction tst = session.beginTransaction();
             session.persist(data);
@@ -54,11 +57,11 @@ public class AlumnoDAO implements DAO<AlumnoEntity> {
     }
 
     @Override
-    public void update(AlumnoEntity data) throws Exception {
+    public void update(Alumno data) throws Exception {
         try (Session session = HibernateUtils.getSessionFactory().openSession()) {
             Transaction tst = session.beginTransaction();
             // Obtiene el objeto de la base de datos
-            if (Objects.isNull(session.find(AlumnoEntity.class, data.getDniAlum()))) {
+            if (Objects.isNull(session.find(Alumno.class, data.getDniAlum()))) {
                 // Si no existe, lo sube a la base de datos
                 session.persist(data);
             } else {
@@ -73,12 +76,12 @@ public class AlumnoDAO implements DAO<AlumnoEntity> {
     }
 
     @Override
-    public void delete(AlumnoEntity data) {
+    public void delete(Alumno data) {
 
     }
 
     @Override
-    public boolean remove(AlumnoEntity alumno) throws Exception {
+    public boolean remove(Alumno alumno) throws Exception {
         boolean eliminado = false;
         try (Session session = HibernateUtils.getSessionFactory().openSession()) {
             Transaction tst = session.beginTransaction();

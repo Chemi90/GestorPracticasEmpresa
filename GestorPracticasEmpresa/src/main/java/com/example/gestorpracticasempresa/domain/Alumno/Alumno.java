@@ -5,6 +5,7 @@ import com.example.gestorpracticasempresa.domain.Profesor.ProfesorEntity;
 import jakarta.persistence.*;
 import lombok.*;
 import java.util.Date;
+import java.util.Set;
 
 @Data
 @Entity
@@ -53,29 +54,18 @@ public class AlumnoEntity {
     private ProfesorEntity tutor;
 
     @Column(name = "tipo_alum")
-    @Enumerated(EnumType.STRING)
-    private TipoAlum tipoAlum;
+    private String tipoAlum; // Cambiado de TipoAlum enum a String
 
+    private static final Set<String> TIPOS_PERMITIDOS = Set.of("dual", "fct", "clases");
 
-
-    public AlumnoEntity (String dniAlum, String nom_alum, Date fechaNac, String contraAlum, String emailAlum, String telefAlum, Empresa empresa, Integer horasAct, Integer horasTot, String obserAlum, ProfesorEntity tutor, String tipoAlum) {
-        this.dniAlum = dniAlum;
-        this.nom_alum = nom_alum;
-        this.fechaNac = fechaNac;
-        this.contraAlum = contraAlum;
-        this.emailAlum = emailAlum;
-        this.telefAlum = telefAlum;
-        this.empresa = empresa;
-        this.horasAct = horasAct;
-        this.horasTot = horasTot;
-        this.obserAlum = obserAlum;
-        this.tutor = tutor;
-        this.tipoAlum = TipoAlum.valueOf(tipoAlum);
+    public void setTipoAlum(String tipoAlum) {
+        if (TIPOS_PERMITIDOS.contains(tipoAlum.toLowerCase())) {
+            this.tipoAlum = tipoAlum;
+        } else {
+            throw new IllegalArgumentException("Valor no permitido para tipoAlum. Los valores permitidos son: dual, fct, clases.");
+        }
     }
-}
 
-enum TipoAlum {
-    dual, fct, clases
 }
 
 
