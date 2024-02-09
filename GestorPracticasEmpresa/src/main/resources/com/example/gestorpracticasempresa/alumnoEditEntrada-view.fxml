@@ -5,7 +5,6 @@
 <?import javafx.scene.control.ChoiceBox?>
 <?import javafx.scene.control.DatePicker?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.control.ProgressBar?>
 <?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.ImageView?>
@@ -17,13 +16,13 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1200.0" style="-fx-background-color: #E9F1F2;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.gestorpracticasempresa.controllers.Alumno.AlumnoHomeController">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1200.0" style="-fx-background-color: #E9F1F2;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.gestorpracticasempresa.controllers.Alumno.AlumnoEditEntradaController">
    <center>
       <BorderPane prefHeight="392.0" prefWidth="600.0" BorderPane.alignment="CENTER">
          <center>
             <VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="500.0" style="-fx-border-color: black; -fx-background-color: white;" BorderPane.alignment="CENTER">
                <children>
-                  <Label text="Nueva entrada" underline="true">
+                  <Label text="Editar entrada" underline="true">
                      <font>
                         <Font name="System Bold" size="24.0" />
                      </font>
@@ -42,7 +41,6 @@
                         <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                         <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                       <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                     </rowConstraints>
                      <children>
                         <Label text="Fecha">
@@ -75,10 +73,6 @@
                         <TextField fx:id="totalHoras" style="-fx-border-color: #C1D4D9;" GridPane.columnIndex="1" GridPane.rowIndex="2" />
                         <TextField fx:id="actividad" style="-fx-border-color: #C1D4D9;" GridPane.columnIndex="1" GridPane.rowIndex="3" />
                         <TextArea fx:id="observaciones" maxHeight="60.0" maxWidth="249.0" prefHeight="200.0" prefWidth="200.0" style="-fx-border-color: #C1D4D9;" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="4" />
-                        <Label fx:id="lblCreacion" textFill="#00ff26" GridPane.columnIndex="1" GridPane.rowIndex="5">
-                           <font>
-                              <Font name="System Bold" size="14.0" />
-                           </font></Label>
                      </children>
                   </GridPane>
                </children>
@@ -94,53 +88,18 @@
                               <ImageView fitHeight="60.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true">
 
                               </ImageView>
-                              <Label fx:id="nombreEmpresa" text="Nombre empresa">
-                                 <HBox.margin>
-                                    <Insets left="10.0" />
-                                 </HBox.margin>
-                                 <font>
-                                    <Font size="18.0" />
-                                 </font>
-                              </Label>
                            </children>
                            <VBox.margin>
                               <Insets bottom="10.0" />
                            </VBox.margin>
                         </HBox>
-                        <HBox alignment="CENTER">
-                           <children>
-                              <ProgressBar fx:id="progresoHoras" prefWidth="200.0" progress="0.67" style="-fx-accent: #85A0A6;" />
-                              <Label fx:id="nHorasTotales" text="Nº horas totales">
-                                 <HBox.margin>
-                                    <Insets left="10.0" />
-                                 </HBox.margin>
-                                 <font>
-                                    <Font size="14.0" />
-                                 </font>
-                              </Label>
-                           </children>
-                        </HBox>
-                        <Label fx:id="nHorasRestantes" text="Nº horas restantes">
-                           <VBox.margin>
-                              <Insets top="5.0" />
-                           </VBox.margin>
-                           <font>
-                              <Font size="14.0" />
-                           </font>
-                        </Label>
+                        <HBox alignment="CENTER" />
                      </children>
                      <HBox.margin>
                         <Insets top="20.0" />
                      </HBox.margin>
                   </VBox>
                   <VBox alignment="BOTTOM_CENTER" prefHeight="129.0" prefWidth="429.0">
-                     <children>
-                        <Label fx:id="nombreTutor" text="Tutor: Nombre del tutor">
-                           <font>
-                              <Font size="18.0" />
-                           </font>
-                        </Label>
-                     </children>
                      <HBox.margin>
                         <Insets top="20.0" />
                      </HBox.margin>
@@ -149,11 +108,6 @@
                      <children>
                         <HBox alignment="CENTER" prefHeight="100.0" prefWidth="308.0">
                            <children>
-                              <Label fx:id="lbNombre" text="Bienvenido Alumno">
-                                 <font>
-                                    <Font size="18.0" />
-                                 </font>
-                              </Label>
                               <ImageView fitHeight="40.0" fitWidth="70.0" pickOnBounds="true" preserveRatio="true">
                               </ImageView>
                            </children>
@@ -176,7 +130,7 @@
    <bottom>
       <HBox alignment="TOP_CENTER" prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
          <children>
-            <Button fx:id="verEntradasBtn" mnemonicParsing="false" onAction="#verEntradas" style="-fx-background-color: #A8BBBF;" text="Ver todas mis entradas">
+            <Button fx:id="verEntradasBtn" mnemonicParsing="false" onAction="#verEntradas" style="-fx-background-color: #A8BBBF;" text="Volver">
                <HBox.margin>
                   <Insets left="30.0" right="30.0" />
                </HBox.margin>

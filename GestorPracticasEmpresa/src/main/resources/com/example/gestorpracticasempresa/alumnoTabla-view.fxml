@@ -25,16 +25,18 @@
                         <Insets bottom="15.0" />
                      </VBox.margin>
                   </Label>
-                  <TableView maxHeight="513.0" maxWidth="800.0" prefHeight="462.0" prefWidth="800.0">
+                  <TableView fx:id="tablaView" maxHeight="513.0" maxWidth="800.0" prefHeight="462.0" prefWidth="800.0">
                     <columns>
-                      <TableColumn prefWidth="75.0" text="Fecha" />
-                      <TableColumn prefWidth="91.02032470703125" text="Tipo práctica" />
-                        <TableColumn prefWidth="95.08047485351562" text="Total horas/día" />
-                        <TableColumn prefWidth="214.32064819335938" text="Actividad" />
-                        <TableColumn prefWidth="185.6793212890625" text="Observaciones" />
-                        <TableColumn prefWidth="71.69415283203125" text="Editar" />
-                        <TableColumn prefWidth="67.7542724609375" text="Eliminar" />
+                        <TableColumn fx:id="idCol" prefWidth="185.6793212890625" text="Id Alumno" />
+                      <TableColumn fx:id="fechaCol" prefWidth="75.0" text="Fecha" />
+                      <TableColumn fx:id="tipoCol" prefWidth="91.02032470703125" text="Tipo práctica" />
+                        <TableColumn fx:id="horasCol" prefWidth="95.08047485351562" text="Total horas/día" />
+                        <TableColumn fx:id="actividadCol" prefWidth="214.32064819335938" text="Actividad" />
+                        <TableColumn fx:id="obvCol" prefWidth="185.6793212890625" text="Observaciones" />
                     </columns>
+                     <columnResizePolicy>
+                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                     </columnResizePolicy>
                   </TableView>
                </children>
             </VBox>
@@ -70,13 +72,26 @@
          <bottom>
             <HBox alignment="TOP_CENTER" prefHeight="114.0" prefWidth="1200.0" BorderPane.alignment="TOP_CENTER">
                <children>
-                  <Button fx:id="volverBtn" alignment="CENTER" contentDisplay="CENTER" maxHeight="35.0" mnemonicParsing="false" onAction="#volver" prefHeight="35.0" style="-fx-background-color: #A8BBBF;" text="Volver">
+                  <Button fx:id="editarBtn" alignment="CENTER" contentDisplay="CENTER" maxHeight="35.0" mnemonicParsing="false" onAction="#editarButton" prefHeight="35.0" style="-fx-background-color: #A8BBBF;" text="Editar">
                      <font>
                         <Font size="18.0" />
                      </font>
                      <HBox.margin>
                         <Insets />
                      </HBox.margin>
+                  </Button>
+                  <Button fx:id="volverBtn" alignment="CENTER" contentDisplay="CENTER" maxHeight="35.0" mnemonicParsing="false" onAction="#volver" prefHeight="35.0" style="-fx-background-color: #A8BBBF;" text="Volver">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="30.0" right="30.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button fx:id="borrarBtn" alignment="CENTER" contentDisplay="CENTER" maxHeight="35.0" mnemonicParsing="false" onAction="#borrarButton" prefHeight="35.0" style="-fx-background-color: #A8BBBF;" text="Eliminar">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
                   </Button>
                </children>
             </HBox>

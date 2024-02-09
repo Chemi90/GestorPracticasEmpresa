@@ -8,24 +8,13 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/gestorpracticasempresa/controllers/Alumno/AlumnoHomeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/gestorpracticasempresa/controllers/Alumno/AlumnoHomeController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/gestorpracticasempresa/controllers/Alumno/AlumnoTablaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/gestorpracticasempresa/controllers/Alumno/AlumnoTablaController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/gestorpracticasempresa/controllers/CrearAlumnoController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/gestorpracticasempresa/controllers/CrearEmpresaController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/gestorpracticasempresa/controllers/IniciarProfesorController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/gestorpracticasempresa/controllers/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/gestorpracticasempresa/controllers/LoginController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/gestorpracticasempresa/domain/Alumno/Alumno.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/gestorpracticasempresa/domain/Alumno/Alumno.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/gestorpracticasempresa/domain/Alumno/AlumnoDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/gestorpracticasempresa/domain/Alumno/AlumnoDAO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/gestorpracticasempresa/alumnoHome-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/gestorpracticasempresa/alumnoHome-view.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/gestorpracticasempresa/crearAlumno.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/gestorpracticasempresa/crearEmpresa.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/gestorpracticasempresa/inicioProfesor.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/gestorpracticasempresa/alumnoTabla-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/gestorpracticasempresa/alumnoTabla-view.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" afterDir="false" />
     </list>
     <list id="181b1035-0a27-42d0-a6eb-3495427bf41c" name="Changes by guzma" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/gestorpracticasempresa/Sesion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/gestorpracticasempresa/Sesion.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/gestorpracticasempresa/controllers/Alumno/AlumnoHomeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/gestorpracticasempresa/controllers/Alumno/AlumnoHomeController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/gestorpracticasempresa/controllers/Alumno/AlumnoTablaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/gestorpracticasempresa/controllers/Alumno/AlumnoTablaController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/gestorpracticasempresa/domain/Alumno/AlumnoDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/gestorpracticasempresa/domain/Alumno/AlumnoDAO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/gestorpracticasempresa/domain/EntradaAlumno/EntradaAlumno.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/gestorpracticasempresa/domain/EntradaAlumno/EntradaAlumno.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/gestorpracticasempresa/utils/HibernateUtils.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,6 +25,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -48,58 +38,17 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="LineStatusTrackerManager">
-    <file path="$PROJECT_DIR$/src/main/java/com/example/gestorpracticasempresa/controllers/Alumno/AlumnoTablaController.java">
-      <ranges>
-        <range start1="2" end1="2" start2="2" end2="3" changelist="76063abd-2e70-4aa2-8427-1019b05dad6d" />
-        <range start1="3" end1="3" start2="4" end2="8" changelist="76063abd-2e70-4aa2-8427-1019b05dad6d" />
-        <range start1="4" end1="4" start2="9" end2="13" changelist="76063abd-2e70-4aa2-8427-1019b05dad6d" />
-        <range start1="7" end1="8" start2="16" end2="17" changelist="181b1035-0a27-42d0-a6eb-3495427bf41c" />
-        <range start1="9" end1="10" start2="18" end2="19" changelist="181b1035-0a27-42d0-a6eb-3495427bf41c" />
-        <range start1="11" end1="11" start2="20" end2="22" changelist="181b1035-0a27-42d0-a6eb-3495427bf41c" />
-        <range start1="12" end1="13" start2="23" end2="24" changelist="181b1035-0a27-42d0-a6eb-3495427bf41c" />
-        <range start1="16" end1="17" start2="27" end2="28" changelist="181b1035-0a27-42d0-a6eb-3495427bf41c" />
-        <range start1="18" end1="18" start2="29" end2="30" changelist="181b1035-0a27-42d0-a6eb-3495427bf41c" />
-        <range start1="20" end1="21" start2="32" end2="33" changelist="181b1035-0a27-42d0-a6eb-3495427bf41c" />
-        <range start1="22" end1="22" start2="34" end2="47" changelist="76063abd-2e70-4aa2-8427-1019b05dad6d" />
-        <range start1="23" end1="23" start2="48" end2="52" changelist="181b1035-0a27-42d0-a6eb-3495427bf41c" />
-      </ranges>
-    </file>
-    <file path="$PROJECT_DIR$/src/main/java/com/example/gestorpracticasempresa/domain/Alumno/AlumnoDAO.java">
-      <ranges>
-        <range start1="4" end1="5" start2="4" end2="5" changelist="181b1035-0a27-42d0-a6eb-3495427bf41c" />
-        <range start1="19" end1="20" start2="19" end2="20" changelist="181b1035-0a27-42d0-a6eb-3495427bf41c" />
-        <range start1="30" end1="31" start2="30" end2="31" changelist="181b1035-0a27-42d0-a6eb-3495427bf41c" />
-        <range start1="38" end1="38" start2="38" end2="50" changelist="76063abd-2e70-4aa2-8427-1019b05dad6d" />
-        <range start1="47" end1="48" start2="59" end2="60" changelist="181b1035-0a27-42d0-a6eb-3495427bf41c" />
-        <range start1="60" end1="61" start2="72" end2="73" changelist="181b1035-0a27-42d0-a6eb-3495427bf41c" />
-        <range start1="85" end1="86" start2="97" end2="98" changelist="181b1035-0a27-42d0-a6eb-3495427bf41c" />
-      </ranges>
-    </file>
     <file path="$PROJECT_DIR$/src/main/java/com/example/gestorpracticasempresa/controllers/Alumno/AlumnoHomeController.java">
       <ranges>
-        <range start1="2" end1="2" start2="2" end2="9" changelist="76063abd-2e70-4aa2-8427-1019b05dad6d" />
-        <range start1="3" end1="3" start2="10" end2="14" changelist="76063abd-2e70-4aa2-8427-1019b05dad6d" />
-        <range start1="4" end1="4" start2="15" end2="20" changelist="76063abd-2e70-4aa2-8427-1019b05dad6d" />
-        <range start1="7" end1="8" start2="23" end2="24" changelist="181b1035-0a27-42d0-a6eb-3495427bf41c" />
-        <range start1="9" end1="10" start2="25" end2="26" changelist="181b1035-0a27-42d0-a6eb-3495427bf41c" />
-        <range start1="11" end1="12" start2="27" end2="28" changelist="181b1035-0a27-42d0-a6eb-3495427bf41c" />
-        <range start1="13" end1="14" start2="29" end2="30" changelist="181b1035-0a27-42d0-a6eb-3495427bf41c" />
-        <range start1="15" end1="16" start2="31" end2="32" changelist="181b1035-0a27-42d0-a6eb-3495427bf41c" />
-        <range start1="17" end1="18" start2="33" end2="34" changelist="181b1035-0a27-42d0-a6eb-3495427bf41c" />
-        <range start1="19" end1="20" start2="35" end2="36" changelist="181b1035-0a27-42d0-a6eb-3495427bf41c" />
-        <range start1="21" end1="22" start2="37" end2="38" changelist="181b1035-0a27-42d0-a6eb-3495427bf41c" />
-        <range start1="23" end1="24" start2="39" end2="40" changelist="181b1035-0a27-42d0-a6eb-3495427bf41c" />
-        <range start1="25" end1="26" start2="41" end2="42" changelist="181b1035-0a27-42d0-a6eb-3495427bf41c" />
-        <range start1="27" end1="28" start2="43" end2="44" changelist="181b1035-0a27-42d0-a6eb-3495427bf41c" />
-        <range start1="29" end1="31" start2="45" end2="52" changelist="181b1035-0a27-42d0-a6eb-3495427bf41c" />
-        <range start1="32" end1="32" start2="53" end2="60" changelist="181b1035-0a27-42d0-a6eb-3495427bf41c" />
-        <range start1="34" end1="35" start2="62" end2="63" changelist="181b1035-0a27-42d0-a6eb-3495427bf41c" />
-        <range start1="36" end1="36" start2="64" end2="70" changelist="76063abd-2e70-4aa2-8427-1019b05dad6d" />
-        <range start1="38" end1="39" start2="72" end2="73" changelist="181b1035-0a27-42d0-a6eb-3495427bf41c" />
-        <range start1="40" end1="40" start2="74" end2="86" changelist="181b1035-0a27-42d0-a6eb-3495427bf41c" />
-        <range start1="42" end1="43" start2="88" end2="89" changelist="181b1035-0a27-42d0-a6eb-3495427bf41c" />
-        <range start1="44" end1="44" start2="90" end2="99" changelist="181b1035-0a27-42d0-a6eb-3495427bf41c" />
-        <range start1="45" end1="45" start2="100" end2="120" changelist="76063abd-2e70-4aa2-8427-1019b05dad6d" />
+        <range start1="3" end1="3" start2="3" end2="4" changelist="181b1035-0a27-42d0-a6eb-3495427bf41c" />
+        <range start1="7" end1="7" start2="8" end2="11" changelist="181b1035-0a27-42d0-a6eb-3495427bf41c" />
+        <range start1="16" end1="16" start2="20" end2="21" changelist="181b1035-0a27-42d0-a6eb-3495427bf41c" />
+        <range start1="51" end1="51" start2="56" end2="59" changelist="76063abd-2e70-4aa2-8427-1019b05dad6d" />
+        <range start1="57" end1="58" start2="65" end2="66" changelist="181b1035-0a27-42d0-a6eb-3495427bf41c" />
+        <range start1="59" end1="59" start2="67" end2="77" changelist="181b1035-0a27-42d0-a6eb-3495427bf41c" />
+        <range start1="97" end1="98" start2="115" end2="117" changelist="181b1035-0a27-42d0-a6eb-3495427bf41c" />
+        <range start1="99" end1="99" start2="118" end2="128" changelist="181b1035-0a27-42d0-a6eb-3495427bf41c" />
+        <range start1="120" end1="120" start2="149" end2="166" changelist="181b1035-0a27-42d0-a6eb-3495427bf41c" />
       </ranges>
     </file>
   </component>
@@ -130,7 +79,7 @@
     "git-widget-placeholder": "pablo",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/Pablo/AppData/Local/SceneBuilder/SceneBuilder.exe",
+    "last_opened_file_path": "C:/Users/Pablo/Documents/GitHub/GestorPracticasEmpresa/GestorPracticasEmpresa/src/main/resources/com/example/gestorpracticasempresa",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -144,7 +93,11 @@
   }
 }]]></component>
   <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.example.gestorpracticasempresa.controllers.Alumno" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Pablo\Documents\GitHub\GestorPracticasEmpresa\GestorPracticasEmpresa\src\main\resources\com\example\gestorpracticasempresa" />
       <recent name="C:\Users\Pablo\Documents\GitHub\GestorPracticasEmpresa\GestorPracticasEmpresa\src\main\java\com\example\gestorpracticasempresa" />
       <recent name="C:\Users\Pablo\Documents\GitHub\GestorPracticasEmpresa\GestorPracticasEmpresa\src\main\java\com\example\gestorpracticasempresa\entity" />
     </key>
@@ -194,6 +147,9 @@
       <workItem from="1706896156675" duration="5182000" />
       <workItem from="1707076287301" duration="32000" />
       <workItem from="1707078172845" duration="5238000" />
+      <workItem from="1707158655662" duration="5275000" />
+      <workItem from="1707425365497" duration="61000" />
+      <workItem from="1707502402293" duration="6248000" />
     </task>
     <servers />
   </component>
@@ -215,13 +171,8 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/example/gestorpracticasempresa/domain/Alumno/AlumnoDAO.java</url>
-          <line>19</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/example/gestorpracticasempresa/domain/Alumno/AlumnoDAO.java</url>
-          <line>33</line>
+          <url>file://$PROJECT_DIR$/src/main/java/com/example/gestorpracticasempresa/controllers/Alumno/AlumnoHomeController.java</url>
+          <line>120</line>
           <option name="timeStamp" value="4" />
         </line-breakpoint>
       </breakpoints>

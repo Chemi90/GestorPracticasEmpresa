@@ -12,7 +12,7 @@ import java.time.LocalDate;
 @AllArgsConstructor
 @Getter
 @Setter
-@Table(name = "EntradaPractica")
+@Table(name = "EntradaPractica_temp")
 public class EntradaAlumno {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -36,6 +36,7 @@ public class EntradaAlumno {
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "dni_alum", referencedColumnName = "dni_alum")
+    @ToString.Exclude
     private Alumno alumno;
 
     public EntradaAlumno(LocalDate fecha, String tipoPractica, int totalHoras, String actividad, String observaciones, Alumno alumno) {
